@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { Login, Register } from "./views/auth";
+import Login from "../views/auth/login";
+import Register from "../views/auth/register";
 
 function Routes() {
     return (
