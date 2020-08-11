@@ -1,4 +1,4 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSignInAlt } from "@fortawesome/pro-light-svg-icons";
+import { far } from "@fortawesome/pro-regular-svg-icons";
 
-library.add(faSignInAlt);
+library.add(far);
