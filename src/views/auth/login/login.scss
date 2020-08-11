@@ -1,12 +1,13 @@
 .login {
     min-height: 100vh;
-    text-align: center;
 
     &-form {
         margin: auto;
 
         &__wrapper {
-            background-color: red;
+            background-color: #e6e6e6;
+            border-radius: 8px;
+            padding: 25px;
         }
     }
 }
