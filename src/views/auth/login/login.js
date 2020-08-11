@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./login.scss";
+
+import { Col, Container, Form, Row } from "react-bootstrap";
 
 function Login() {
     return (
-        <div className="login">
-            <Link to={"/register"} className="btn btn-info">
-                Login
-            </Link>
-        </div>
+        <Container>
+            <Row className="login">
+                <Col className="login-form">
+                    <Form className="login-form__wrapper">Lala</Form>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
