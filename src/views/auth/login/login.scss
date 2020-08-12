@@ -12,17 +12,15 @@
         padding: 70px 35px;
 
         img {
-            animation: spin infinite 20s linear;
-            width: 200px;
+            width: 150px;
+        }
+
+        &__divider {
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
         }
     }
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.input-group-text {
+    background-color: #ffffff;
 }

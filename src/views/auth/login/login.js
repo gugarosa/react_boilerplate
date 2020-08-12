@@ -11,12 +11,14 @@ function Login() {
         <div id="login">
             <Container>
                 <Row className="login">
-                    <Col xs="12" sm="10" md="10" lg="7" className="login-box">
+                    <Col xs="12" sm="12" md="10" lg="7" className="login-box">
                         <Row className="justify-content-around">
                             <Image src={logo} />
+                            <div className="login-box__divider d-none d-sm-block"></div>
                             <Form className="login-box__form">
                                 <Form.Group className="text-center mb-4">
-                                    <h3>Vivere</h3>
+                                    <h3>Humana Alimentar</h3>
+                                    <span className="text-muted">Painel de Admnistração</span>
                                 </Form.Group>
                                 <Form.Group controlId="email">
                                     <InputGroup>
@@ -38,13 +40,18 @@ function Login() {
                                         <Form.Control type="password" placeholder="Senha" />
                                     </InputGroup>
                                 </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Button variant="primary" block>
-                                        <FontAwesomeIcon icon={["far", "sign-in"]} /> Login
+                                <Form.Group className="mb-2">
+                                    <Button
+                                        className="text-uppercase font-weight-bold"
+                                        variant="primary"
+                                        block
+                                    >
+                                        Login
+                                        {/* <FontAwesomeIcon icon={["far", "sign-in"]} /> Login */}
                                     </Button>
                                 </Form.Group>
                                 <Form.Group className="text-center mb-0">
-                                    <Form.Label>Esqueceu a senha?</Form.Label>
+                                    <Button variant="link">Esqueceu a senha?</Button>
                                 </Form.Group>
                             </Form>
                         </Row>
