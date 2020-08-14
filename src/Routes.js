@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Login from "../views/auth/login";
-import Register from "../views/auth/register";
+import { Login } from "./views/auth/Login";
+import { Register } from "./views/auth/Register";
 
-function Routes() {
+export const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
@@ -13,6 +13,4 @@ function Routes() {
             </Switch>
         </BrowserRouter>
     );
-}
-
-export default Routes;
+};

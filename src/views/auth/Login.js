@@ -1,12 +1,11 @@
 import React from "react";
-import "./login.scss";
-
-import { Button, Col, Container, Form, Image, InputGroup, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Col, Container, Form, Image, InputGroup, Row } from "react-bootstrap";
 
-import logo from "../../../assets/img/logo.svg";
+import "./auth.scss";
+import logo from "../../assets/img/logo.svg";
 
-function Login() {
+export const Login = () => {
     return (
         <div id="login">
             <Container>
@@ -47,7 +46,6 @@ function Login() {
                                         block
                                     >
                                         Login
-                                        {/* <FontAwesomeIcon icon={["far", "sign-in"]} /> Login */}
                                     </Button>
                                 </Form.Group>
                                 <Form.Group className="text-center mb-0">
@@ -60,6 +58,4 @@ function Login() {
             </Container>
         </div>
     );
-}
-
-export default Login;
+};

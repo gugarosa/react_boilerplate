@@ -1,9 +1,9 @@
 import React from "react";
+import { Routes } from "./Routes";
 
-import "./app.scss";
-import "./icons";
+import "./utils/externalPackages";
 
-import Routes from "./routes";
+import "./App.scss";
 
 function App() {
     return <Routes />;
