@@ -1,12 +1,16 @@
 import React from "react";
 import { Routes } from "./Routes";
-
-import "./utils/externalPackages";
+import { AuthProvider } from "./context/Auth";
 
 import "./App.scss";
+import "./utils/externalPackages";
 
 function App() {
-    return <Routes />;
+    return (
+        <AuthProvider>
+            <Routes />
+        </AuthProvider>
+    );
 }
 
 export default App;

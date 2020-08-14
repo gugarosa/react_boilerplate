@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Col, Container, Form, Image, InputGroup, Row } from "react-bootstrap";
+
+import { AuthContext } from "../../context/Auth";
 
 import "./auth.scss";
 import logo from "../../assets/img/logo.svg";
 
 export const Login = () => {
+    const { state, login, logout } = useContext(AuthContext);
+
     return (
         <div id="login">
             <Container>
@@ -44,13 +48,23 @@ export const Login = () => {
                                         className="text-uppercase font-weight-bold"
                                         variant="primary"
                                         block
+                                        onClick={() => login()}
                                     >
                                         Login
+                                    </Button>
+                                    <Button
+                                        className="text-uppercase font-weight-bold"
+                                        variant="danger"
+                                        block
+                                        onClick={() => logout()}
+                                    >
+                                        Logout
                                     </Button>
                                 </Form.Group>
                                 <Form.Group className="text-center mb-0">
                                     <Button variant="link">Esqueceu a senha?</Button>
                                 </Form.Group>
+                                State: {state.isAuthorized.toString()}
                             </Form>
                         </Row>
                     </Col>
