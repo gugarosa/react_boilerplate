@@ -1,26 +1,38 @@
 import React, { createContext, useReducer } from "react";
 
 // State
-const initialState = {
-    isAuthorized: JSON.parse(localStorage.getItem("isAuthorized")) || false,
-    user: null,
-    token: null,
+const initialState = () => {
+    let isAuthorized = false;
+    const user = JSON.parse(localStorage.getItem("user")) || null;
+    const token = JSON.parse(localStorage.getItem("token")) || null;
+
+    if (token) {
+        isAuthorized = true;
+    }
+
+    return {
+        isAuthorized: isAuthorized,
+        user: user,
+        token: token,
+    };
 };
 
 // Reducer
 const AuthReducer = (state, action) => {
     switch (action.type) {
         case "LOGIN":
-            localStorage.setItem("isAuthorized", true);
+            localStorage.setItem("token", JSON.stringify(action.payload.token));
             return {
                 ...state,
                 isAuthorized: true,
+                token: action.payload.token,
             };
         case "LOGOUT":
-            localStorage.setItem("isAuthorized", false);
+            localStorage.clear();
             return {
                 ...state,
                 isAuthorized: false,
+                token: null,
             };
         default:
             return state;
@@ -28,16 +40,17 @@ const AuthReducer = (state, action) => {
 };
 
 // Context
-export const AuthContext = createContext(initialState);
+export const AuthContext = createContext(initialState());
 
 // Provider
 export const AuthProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AuthReducer, initialState);
+    const [state, dispatch] = useReducer(AuthReducer, initialState());
 
     // Actions
-    function login() {
+    function login(data) {
         dispatch({
             type: "LOGIN",
+            payload: data,
         });
     }
 

@@ -48,7 +48,7 @@ export const Login = () => {
                                         className="text-uppercase font-weight-bold"
                                         variant="primary"
                                         block
-                                        onClick={() => login()}
+                                        onClick={() => login({ token: "token" })}
                                     >
                                         Login
                                     </Button>
