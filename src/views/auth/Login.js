@@ -8,7 +8,7 @@ import "./auth.scss";
 import logo from "../../assets/img/logo.svg";
 
 export const Login = () => {
-    const { state, login, logout } = useContext(AuthContext);
+    const { login, logout } = useContext(AuthContext);
 
     return (
         <div id="login">
@@ -48,7 +48,7 @@ export const Login = () => {
                                         className="text-uppercase font-weight-bold"
                                         variant="primary"
                                         block
-                                        onClick={() => login({ token: "token" })}
+                                        onClick={() => login({ user: "user", token: "token" })}
                                     >
                                         Login
                                     </Button>
@@ -64,7 +64,6 @@ export const Login = () => {
                                 <Form.Group className="text-center mb-0">
                                     <Button variant="link">Esqueceu a senha?</Button>
                                 </Form.Group>
-                                State: {state.isAuthorized.toString()}
                             </Form>
                         </Row>
                     </Col>

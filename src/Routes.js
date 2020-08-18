@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
-import { AuthContext } from "./context/Auth";
+import { AuthContext, isAuthorized } from "./context/Auth";
 
 import { Login } from "./views/auth/Login";
 import { NotFound } from "./views/auth/NotFound";
@@ -8,6 +8,7 @@ import { Register } from "./views/auth/Register";
 
 import { Home } from "./views/dashboard/Home";
 
+// Authentication guard that checks whether user is authorized or not
 const PrivateRoute = ({ component: Component, ...rest }) => {
     const { state } = useContext(AuthContext);
 
@@ -15,7 +16,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
         <Route
             {...rest}
             render={(props) =>
-                state.isAuthorized ? (
+                isAuthorized(state.token) ? (
                     <Component {...props} />
                 ) : (
                     <Redirect to={{ pathname: "/login", state: { from: props.location } }} />
@@ -25,6 +26,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     );
 };
 
+// Application routes
 export const Routes = () => {
     return (
         <BrowserRouter>

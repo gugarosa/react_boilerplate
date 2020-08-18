@@ -1,12 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 export const Register = () => {
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data);
+    };
+
     return (
         <div className="register">
-            <Link to={"/login"} className="btn btn-danger">
-                Register
-            </Link>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input name="email" type="email" ref={register({ required: true })}></input>
+                <input name="password" type="password" ref={register({ required: true })}></input>
+                <button>Submit</button>
+            </form>
         </div>
     );
 };

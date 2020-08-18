@@ -1,37 +1,27 @@
 import React, { createContext, useReducer } from "react";
 
 // State
-const initialState = () => {
-    let isAuthorized = false;
-    const user = JSON.parse(localStorage.getItem("user")) || null;
-    const token = JSON.parse(localStorage.getItem("token")) || null;
-
-    if (token) {
-        isAuthorized = true;
-    }
-
-    return {
-        isAuthorized: isAuthorized,
-        user: user,
-        token: token,
-    };
+const initialState = {
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    token: JSON.parse(localStorage.getItem("token")) || null,
 };
 
 // Reducer
 const AuthReducer = (state, action) => {
     switch (action.type) {
         case "LOGIN":
+            localStorage.setItem("user", JSON.stringify(action.payload.user));
             localStorage.setItem("token", JSON.stringify(action.payload.token));
             return {
                 ...state,
-                isAuthorized: true,
+                user: action.payload.user,
                 token: action.payload.token,
             };
         case "LOGOUT":
             localStorage.clear();
             return {
                 ...state,
-                isAuthorized: false,
+                user: null,
                 token: null,
             };
         default:
@@ -40,11 +30,11 @@ const AuthReducer = (state, action) => {
 };
 
 // Context
-export const AuthContext = createContext(initialState());
+export const AuthContext = createContext(initialState);
 
 // Provider
 export const AuthProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AuthReducer, initialState());
+    const [state, dispatch] = useReducer(AuthReducer, initialState);
 
     // Actions
     function login(data) {
@@ -61,4 +51,13 @@ export const AuthProvider = ({ children }) => {
     }
 
     return <AuthContext.Provider value={{ state, login, logout }}>{children}</AuthContext.Provider>;
+};
+
+// Additional functions
+export const isAuthorized = (token) => {
+    if (token) {
+        return true;
+    }
+
+    return false;
 };
