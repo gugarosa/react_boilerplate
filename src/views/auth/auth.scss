@@ -1,26 +1,19 @@
-#login {
-    background: linear-gradient(-135deg, #50c8a0, #4158d0);
+.font-weight-l-bold {
+    font-weight: 500;
 }
 
 .login {
     min-height: 100vh;
 
-    &-box {
-        background-color: #ffffff;
-        border-radius: 10px;
-        margin: auto;
-        padding: 70px 35px;
-
-        img {
-            width: 150px;
-        }
-
-        &__divider {
-            border-left: 1px solid rgba(0, 0, 0, 0.05);
+    &-main {
+        &__header {
+            img {
+                width: 45px;
+            }
         }
     }
-}
 
-.input-group-text {
-    background-color: #ffffff;
+    &-alt {
+        background: linear-gradient(-135deg, #50c8a0, #4158d0);
+    }
 }
