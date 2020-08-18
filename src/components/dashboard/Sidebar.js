@@ -6,12 +6,12 @@ export const Sidebar = () => {
         <nav className="sidebar">
             <ul className="sidebar-nav">
                 <li className="sidebar-nav__item">
-                    <a href="#">
+                    <a href="/#">
                         <span>Cats</span>
                     </a>
                 </li>
                 <li className="sidebar-nav__item">
-                    <a href="#">
+                    <a href="/#">
                         <span>Dogs</span>
                     </a>
                 </li>
