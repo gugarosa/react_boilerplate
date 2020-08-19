@@ -5,16 +5,48 @@ import { SidebarItem } from "./SidebarItem";
 
 import "./sidebar.scss";
 
-export const Sidebar = () => {
+export const Sidebar = ({ location }) => {
+    const items = [
+        {
+            title: "Início",
+            icon: "home",
+            link: "/dashboard",
+        },
+        {
+            title: "Perfil",
+            icon: "user",
+            link: "/dashboard/profile",
+        },
+        {
+            title: "Produtos",
+            icon: "file-medical",
+            link: "/dashboard/item",
+        },
+        {
+            title: "Estatísticas",
+            icon: "chart-line",
+            link: "/dashboard/stats",
+        },
+        {
+            title: "Sair",
+            icon: "sign-out-alt",
+            link: "/dashboard/logout",
+        },
+    ];
+
     return (
         <nav className="sidebar">
             <ul className="sidebar-menu">
                 <SidebarHeader title="Humana" />
-                <SidebarItem title="Início" icon="home" />
-                <SidebarItem title="Perfil" icon="user" />
-                <SidebarItem title="Produtos" icon="file-medical" />
-                <SidebarItem title="Estatísticas" icon="chart-line" />
-                <SidebarItem title="Sair" icon="sign-out-alt" />
+                {items.map((item) => (
+                    <SidebarItem
+                        active={item.link === location.pathname}
+                        key={item.link}
+                        title={item.title}
+                        icon={item.icon}
+                        link={item.link}
+                    />
+                ))}
             </ul>
         </nav>
     );

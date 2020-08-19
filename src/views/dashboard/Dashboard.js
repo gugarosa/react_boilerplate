@@ -8,10 +8,10 @@ import { Item } from "./Item";
 
 import "./dashboard.scss";
 
-export const Dashboard = ({ match }) => {
+export const Dashboard = ({ location, match }) => {
     return (
         <>
-            <Sidebar />
+            <Sidebar location={location} />
             <div className="dashboard">
                 <Switch>
                     <Route exact path={match.path} component={Home} />

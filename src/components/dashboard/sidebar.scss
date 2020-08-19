@@ -1,6 +1,7 @@
 // Variables
 $text-primary: #b6b6b6;
 $text-secondary: #ececec;
+$text-icon: #84d8f1;
 $bg-primary: #23232e;
 $bg-secondary: #141418;
 // $text-primary: #ffffff;
@@ -28,7 +29,6 @@ $transition-speed: 500ms;
         height: 5rem;
         color: $text-primary;
         text-decoration: none;
-        filter: grayscale(100%) opacity(0.7);
         transition: $transition-speed;
 
         &-text {
@@ -37,6 +37,7 @@ $transition-speed: 500ms;
             left: -999px;
             transition: $transition-speed;
             margin-left: 2.5rem;
+            filter: grayscale(100%) opacity(0.7);
         }
 
         &-icon {
@@ -45,12 +46,24 @@ $transition-speed: 500ms;
             min-width: 2rem;
             margin: 0 1.5rem;
             transition: $transition-speed;
+            filter: grayscale(100%) opacity(0.7);
         }
     }
 
     &__link:hover {
-        filter: grayscale(0%) opacity(1);
+        background: $bg-secondary;
         color: $text-secondary;
+        text-decoration: none;
+
+        .sidebar-header__link-text {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        .sidebar-header__link-icon {
+            color: $text-icon;
+            filter: grayscale(0%) opacity(1);
+            transition: $transition-speed;
+        }
     }
 }
 
@@ -63,12 +76,13 @@ $transition-speed: 500ms;
         align-items: center;
         height: 5rem;
         color: $text-primary;
-        filter: grayscale(100%) opacity(0.7);
         transition: $transition-speed;
 
         &-text {
             display: none;
+            font-weight: 600;
             margin-left: 1rem;
+            filter: grayscale(100%) opacity(0.7);
         }
 
         &-icon {
@@ -76,14 +90,30 @@ $transition-speed: 500ms;
             width: 2rem;
             min-width: 2rem;
             margin: 0 1.5rem;
+            filter: grayscale(100%) opacity(0.7);
+            transition: $transition-speed;
         }
     }
 
     &__link:hover {
-        filter: grayscale(0%) opacity(1);
         background: $bg-secondary;
         color: $text-secondary;
         text-decoration: none;
+
+        .sidebar-item__link-text {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        .sidebar-item__link-icon {
+            color: $text-icon;
+            filter: grayscale(0%) opacity(1);
+            transition: $transition-speed;
+        }
+    }
+
+    &__link--active {
+        background: $bg-secondary;
+        color: $text-secondary;
     }
 }
 
