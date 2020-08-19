@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
 import { AuthContext, isAuthorized } from "./context/Auth";
 
+import { ForgotPassword } from "./views/auth/ForgotPassword";
 import { Login } from "./views/auth/Login";
 import { NotFound } from "./views/auth/NotFound";
 import { Register } from "./views/auth/Register";
@@ -31,6 +32,7 @@ export const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
+                <Route exact path="/forgot-password" component={ForgotPassword} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <PrivateRoute exact path="/" component={Home} />

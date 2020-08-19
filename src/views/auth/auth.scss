@@ -1,8 +1,13 @@
+.custom-control-label::after,
+.custom-control-label::before {
+    top: 0.35rem !important;
+}
+
 .font-weight-l-bold {
     font-weight: 500;
 }
 
-.login {
+.auth {
     min-height: 100vh;
 
     &-main {

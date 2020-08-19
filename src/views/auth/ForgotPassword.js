@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { AuthContext } from "../../context/Auth";
-
 import "./auth.scss";
 import logo from "../../assets/img/logo.svg";
 
-export const Login = () => {
-    const { login } = useContext(AuthContext);
+export const ForgotPassword = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
@@ -25,8 +22,11 @@ export const Login = () => {
                         <span className="font-weight-bold">Humana Life</span>
                     </div>
                     <div className="mb-5">
-                        <h1 className="font-weight-bold">Bem-vindo!</h1>
-                        <h4>Painel de Administração</h4>
+                        <h1 className="font-weight-bold">Resetar senha</h1>
+                        <h5>
+                            Preencha com os dados utilizados no cadastro e lhe enviaremos um e-mail
+                            para resetar a senha.
+                        </h5>
                     </div>
                     <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
@@ -39,32 +39,16 @@ export const Login = () => {
                                 ref={register}
                             />
                         </div>
-                        <div className="form-group mb-4">
-                            <label className="font-weight-l-bold">Senha</label>
-                            <input
-                                className="form-control"
-                                name="password"
-                                type="password"
-                                placeholder="********"
-                                ref={register}
-                            />
-                        </div>
-                        <button
-                            className="btn btn-primary btn-block font-weight-bold"
-                            onClick={() => login({ user: "user", token: "token" })}
-                        >
-                            <FontAwesomeIcon icon={["far", "sign-in-alt"]} /> Entrar
+                        <button className="btn btn-primary btn-block font-weight-bold">
+                            <FontAwesomeIcon icon={["far", "unlock"]} /> Resetar Senha
                         </button>
                     </form>
                     <hr></hr>
                     <div className="mt-auto">
-                        <Link to={"/forgot-password"} className="btn btn-link p-0 mb-2">
-                            Esqueci a senha
-                        </Link>
                         <div>
-                            <span className="mr-1 font-weight-l-bold">Não possui uma conta?</span>
-                            <Link to={"/register"} className="btn btn-link align-baseline p-0">
-                                Registrar
+                            <span className="mr-1 font-weight-l-bold">Voltar para a</span>
+                            <Link to={"/login"} className="btn btn-link align-baseline p-0">
+                                página inicial
                             </Link>
                         </div>
                     </div>
