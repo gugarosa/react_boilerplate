@@ -19,7 +19,7 @@ export const Login = () => {
     return (
         <div className="container-fluid">
             <div className="row auth">
-                <div className="col-md-6 col-xl-5 p-4 p-md-5 login-main">
+                <div className="col-md-6 col-xl-5 p-4 p-md-5 auth-main">
                     <div className="row no-gutters align-items-center mb-4 auth-main__header">
                         <img className="mr-1" src={logo} alt="Humana Life" />
                         <span className="font-weight-bold">Humana Life</span>

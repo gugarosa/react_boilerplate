@@ -16,7 +16,7 @@ export const Register = () => {
     return (
         <div className="container-fluid">
             <div className="row auth">
-                <div className="col-md-6 col-xl-5 p-4 p-md-5 login-main">
+                <div className="col-md-6 col-xl-5 p-4 p-md-5 auth-main">
                     <div className="row no-gutters align-items-center mb-4 auth-main__header">
                         <img className="mr-1" src={logo} alt="Humana Life" />
                         <span className="font-weight-bold">Humana Life</span>
@@ -71,9 +71,7 @@ export const Register = () => {
                     <hr></hr>
                     <div className="mt-auto">
                         <div className="mb-2">
-                            <span className="mr-1 font-weight-l-bold">
-                                Ao registrar, você está de acordo com os
-                            </span>
+                            <span className="mr-1">Ao registrar, você está de acordo com os</span>
                             <Link to={"/login"} className="btn btn-link align-baseline p-0">
                                 Termos de Serviço
                             </Link>

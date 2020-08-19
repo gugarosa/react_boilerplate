@@ -7,7 +7,7 @@ import { Login } from "./views/auth/Login";
 import { NotFound } from "./views/auth/NotFound";
 import { Register } from "./views/auth/Register";
 
-import { Home } from "./views/dashboard/Home";
+import { Dashboard } from "./views/dashboard/Dashboard";
 
 // Authentication guard that checks whether user is authorized or not
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -35,8 +35,8 @@ export const Routes = () => {
                 <Route exact path="/forgot-password" component={ForgotPassword} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
-                <PrivateRoute exact path="/" component={Home} />
-                <Route path="*" component={NotFound} />
+                <PrivateRoute path="/dashboard" component={Dashboard} />
+                <Route component={NotFound} />
             </Switch>
         </BrowserRouter>
     );
