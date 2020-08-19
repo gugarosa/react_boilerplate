@@ -10,7 +10,7 @@ import "./dashboard.scss";
 
 export const Dashboard = ({ match }) => {
     return (
-        <div>
+        <>
             <Sidebar />
             <div className="dashboard">
                 <Switch>
@@ -19,6 +19,6 @@ export const Dashboard = ({ match }) => {
                     <Redirect to="/dashboard" />
                 </Switch>
             </div>
-        </div>
+        </>
     );
 };
