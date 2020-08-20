@@ -1,0 +1,20 @@
+// Common
+.font-weight-l-bold {
+    font-weight: 500;
+}
+
+// LandingHeader
+.landing-header {
+    img {
+        width: 45px;
+    }
+}
+
+// Landing
+.landing {
+    min-height: 100vh;
+
+    &__bg {
+        background: linear-gradient(-135deg, #50c8a0, #4158d0);
+    }
+}
