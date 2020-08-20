@@ -4,10 +4,6 @@ $text-secondary: #ececec;
 $text-icon: #84d8f1;
 $bg-primary: #23232e;
 $bg-secondary: #141418;
-// $text-primary: #ffffff;
-// $text-secondary: #000000;
-// $bg-primary: #000000;
-// $bg-secondary: #ffffff;
 $transition-speed: 500ms;
 
 // SidebarHeader
@@ -112,8 +108,15 @@ $transition-speed: 500ms;
     }
 
     &__link--active {
-        background: $bg-secondary;
-        color: $text-secondary;
+        .sidebar-item__link-text {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        .sidebar-item__link-icon {
+            color: $text-icon;
+            filter: grayscale(0%) opacity(1);
+            transition: $transition-speed;
+        }
     }
 }
 
@@ -123,6 +126,7 @@ $transition-speed: 500ms;
     position: fixed;
     overflow: hidden;
     transition: width $transition-speed ease;
+    z-index: 2;
 
     &-menu {
         list-style: none;

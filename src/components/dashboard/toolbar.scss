@@ -1,0 +1,21 @@
+// Variables
+$shadow-color: #000000;
+
+// Toolbar
+.toolbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4.925rem;
+    margin-left: 5rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 15px 20px -20px rgba($shadow-color, 0.1), 0 0 15px rgba($shadow-color, 0.05);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 576px) {
+    .toolbar {
+        margin: 0;
+        padding: 1rem;
+    }
+}
