@@ -1,5 +1,4 @@
 import React from "react";
-
 import { SidebarHeader } from "./SidebarHeader";
 import { SidebarItem } from "./SidebarItem";
 
@@ -8,7 +7,7 @@ import "./sidebar.scss";
 export const Sidebar = ({ location }) => {
     const items = [
         {
-            title: "Início",
+            title: "Dashboard",
             icon: "home",
             link: "/dashboard",
         },
