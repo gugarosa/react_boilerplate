@@ -8,6 +8,8 @@ export const NotFound = ({ history }) => {
         subtitle: "Por acaso você está perdido? Esta página ainda não existe.",
     };
 
+    const form = null;
+
     const footer = [
         {
             text: "Voltar para a",
@@ -17,5 +19,5 @@ export const NotFound = ({ history }) => {
         },
     ];
 
-    return <Landing header={header} footer={footer} />;
+    return <Landing header={header} form={form} footer={footer} />;
 };
