@@ -38,13 +38,11 @@ export const Login = () => {
             text: null,
             link: "Esqueci a senha",
             linkUrl: "/forgot-password",
-            function: null,
         },
         {
             text: "Não possui uma conta?",
             link: "Registrar",
             linkUrl: "/register",
-            function: null,
         },
     ];
 

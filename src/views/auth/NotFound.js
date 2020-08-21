@@ -13,9 +13,8 @@ export const NotFound = ({ history }) => {
     const footer = [
         {
             text: "Voltar para a",
-            link: "página anterior",
-            linkUrl: null,
-            function: history.goBack,
+            link: "página principal",
+            linkUrl: "/dashboard",
         },
     ];
 

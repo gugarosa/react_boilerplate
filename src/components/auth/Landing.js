@@ -27,21 +27,9 @@ export const Landing = ({ header, form, footer }) => {
                                 {item.text ? (
                                     <span className="mr-1 font-weight-l-bold">{item.text}</span>
                                 ) : null}
-                                {item.linkUrl ? (
-                                    <Link
-                                        to={item.linkUrl}
-                                        className="btn btn-link align-baseline p-0"
-                                    >
-                                        {item.link}
-                                    </Link>
-                                ) : (
-                                    <button
-                                        onClick={() => item.function()}
-                                        className="btn btn-link align-baseline p-0"
-                                    >
-                                        {item.link}
-                                    </button>
-                                )}
+                                <Link to={item.linkUrl} className="btn btn-link align-baseline p-0">
+                                    {item.link}
+                                </Link>
                             </div>
                         ))}
                     </div>
