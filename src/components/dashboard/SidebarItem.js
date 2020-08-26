@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./sidebar.scss";
 
+// SidebarItem
+// Wraps single items that belongs to the Sidebar
 export const SidebarItem = ({ active, title, icon, link }) => {
     return (
         <li className="sidebar-item">

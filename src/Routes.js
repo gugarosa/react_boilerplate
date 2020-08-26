@@ -9,7 +9,8 @@ import { Register } from "./views/auth/Register";
 
 import { Dashboard } from "./views/dashboard/Dashboard";
 
-// Authentication guard that checks whether user is authorized or not
+// Authentication guard
+// It checks whether an user is authorized or not
 const PrivateRoute = ({ component: Component, ...rest }) => {
     const { state } = useContext(AuthContext);
 

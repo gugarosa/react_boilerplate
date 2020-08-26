@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/Auth";
 import { Landing } from "../../components/auth/Landing";
 
+// Login
+// Implements the login view
 export const Login = () => {
     const { login } = useContext(AuthContext);
 

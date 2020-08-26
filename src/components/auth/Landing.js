@@ -6,6 +6,8 @@ import logo from "../../assets/img/logo.svg";
 
 import "./landing.scss";
 
+// Landing
+// Provides a dynamic creation of landing pages
 export const Landing = ({ header, form, footer }) => {
     return (
         <div className="container-fluid">

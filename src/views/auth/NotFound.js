@@ -2,6 +2,8 @@ import React from "react";
 
 import { Landing } from "../../components/auth/Landing";
 
+// NotFound
+// Implmements the not-found view
 export const NotFound = ({ history }) => {
     const header = {
         title: "404",

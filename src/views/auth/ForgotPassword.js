@@ -2,6 +2,8 @@ import React from "react";
 
 import { Landing } from "../../components/auth/Landing";
 
+// ForgotPassword
+// Implements the forgot password view
 export const ForgotPassword = () => {
     const header = {
         title: "Resetar senha",

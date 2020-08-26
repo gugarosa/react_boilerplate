@@ -1,5 +1,6 @@
 import { api, withToken } from "./api";
 
+// Item
 export const find = async (id) => {
     try {
         const res = await api.get("/item/" + id, { headers: withToken() });

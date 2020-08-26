@@ -8,6 +8,8 @@ import { Sidebar } from "../../components/dashboard/Sidebar";
 import { Home } from "./Home";
 import { Item } from "./Item";
 
+// Dashboard
+// Wraps wanted dashboard components and adds a router for its children
 export const Dashboard = ({ location, match }) => {
     return (
         <>

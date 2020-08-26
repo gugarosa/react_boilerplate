@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./sidebar.scss";
 
+// SidebarHeader
+// Wraps the header part of the Sidebar component
 export const SidebarHeader = ({ title }) => {
     return (
         <li className="sidebar-header">

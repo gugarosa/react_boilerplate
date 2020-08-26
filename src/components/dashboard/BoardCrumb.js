@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./board.scss";
 
+// BoardCrumb
+// Provides a dynamic creation of breadcrumbs
 export const BoardCrumb = () => {
     return (
         <div className="board-crumb text-muted mb-2">

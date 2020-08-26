@@ -2,6 +2,8 @@ import React from "react";
 
 import { Landing } from "../../components/auth/Landing";
 
+// Register
+// Implements the registration view
 export const Register = () => {
     const header = {
         title: "Registro",

@@ -4,6 +4,8 @@ import { SidebarItem } from "./SidebarItem";
 
 import "./sidebar.scss";
 
+// Sidebar
+// Creates a fully-customizable sidebar
 export const Sidebar = ({ location }) => {
     const items = [
         {

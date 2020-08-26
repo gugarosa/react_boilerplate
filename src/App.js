@@ -6,7 +6,7 @@ import "./App.scss";
 import "./utils/externalPackages";
 
 // Application
-// Note that it wraps the authetication provider and routes
+// Wraps the authetication provider and routes
 function App() {
     return (
         <AuthProvider>

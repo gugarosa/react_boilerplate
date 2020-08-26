@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./landing.scss";
 
+// LandingForm
+// Provides a dynamic creation of landing page forms
 export const LandingForm = ({ form }) => {
     const { register, handleSubmit } = useForm();
 
