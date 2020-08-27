@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LandingForm } from "./LandingForm";
 
-import logo from "../../assets/img/logo.svg";
+import { LANDING_LOGO, LANDING_TITLE } from "../../utils/configComponents";
 
 import "./landing.scss";
 
@@ -14,8 +14,8 @@ export const Landing = ({ header, form, footer }) => {
             <div className="row landing">
                 <div className="col-md-6 col-xl-5 p-4 p-md-5">
                     <div className="row no-gutters align-items-center mb-4 landing-header">
-                        <img className="mr-1" src={logo} alt="Humana Life" />
-                        <span className="font-weight-bold">Humana Life</span>
+                        <img className="mr-1" src={LANDING_LOGO} alt={LANDING_TITLE} />
+                        <span className="font-weight-bold">{LANDING_TITLE}</span>
                     </div>
                     <div className="mb-5">
                         <h1 className="font-weight-bold">{header.title}</h1>
