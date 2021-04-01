@@ -1,68 +1,124 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Boilerplate: A React.js Front-end Application
 
-## Available Scripts
+## Welcome to React Boilerplate.
 
-In the project directory, you can run:
+An easy-to-use solution to your visualization needs. Firstly, implemented along with the React.js framework, you can define your components, services, routes, and services. Lastly, you can also use our own. We offer both solutions and all the essential tools that you need in order to construct a front-end. Please, follow along the next sections in order to learn more about this excellent tool.
 
-### `npm start`
+React Boilerplate is compatible with the latest: **React.js**.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Package guidelines
 
-### `npm test`
+1. The very first information you need is in the very **next** section.
+2. **Installing** is also easy if you wish to read the code and bump yourself into, follow along.
+3. Note that there might be some **additional** steps in order to use our solutions.
+4. If there is a problem, please do not **hesitate**, call us.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting started: 60 seconds with React Boilerplate
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First of all. Code is all commented. Yes, they are commented. Just browse to any file, chose your subpackage, and follow it. We have high-level code for most tasks we could think of.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Alternatively, if you wish to learn even more, please take a minute:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React Boilerplate is based on the following structure, and you should pay attention to its tree:
 
-### `npm run eject`
+```
+- react_boilerplate
+    - public
+    - src
+        - assets
+        - components
+        - context
+        - services
+        - utils
+        - views
+        - App.js
+        - App.scss
+        - Routes.js
+        - index.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Public
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This folder holds all the base public files that will be further generated and served. Only use if you need to change the favicon or configure any relevant header that must be present on HTML files.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Source
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Known as ```src```, this is where all the magic happens. Follow along the next items to understand what is happening here.
 
-## Learn More
+#### assets
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+External assets should be created and used here. We will be using SCSS as your pre-processor for CSS files. You can also add here static images if needed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### components
 
-### Code Splitting
+Every component should be placed here. An intelligent application uses a trade-off between when componentization should happen or not. For layout-related components, we assume this is a must.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### context
 
-### Analyzing the Bundle Size
+Needs to manage states and handle more complex changes? Based on React's Context and Hooks API we provide an easier functionality without the need of Redux.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### services
 
-### Making a Progressive Web App
+These are services/requests that should be implemented to communicate both front- and back-ends.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### utils
 
-### Advanced Configuration
+Utilities should be placed and loaded here. We encapsulate some common definitions so they can be used throughout the whole project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### views
 
-### Deployment
+Views are the "face" of your application. Essentially, they are a bunch of components, assume a route and perform in a particular way inside the application.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+---
 
-### `npm run build` fails to minify
+## Installation
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+We believe that everything has to be easy. Not tricky or daunting, React Boilerplate will be the one-to-go package that you will need, from the very first installation to the daily-tasks implementing needs.
+
+### Development
+
+First of all, make sure that you have a Node.js environment installed, allowing the access to ```npm```or ```yarn``` commands.
+
+Next, install the needed requirements by performing the following commands:
+
+```
+npm install | yarn install
+```
+
+Finally, you can start the development service:
+
+```
+npm start | yarn start
+```
+
+All bootstrap commands were pre-loaded when this package was created. We have strictly followed the [Create React App](https://github.com/facebook/create-react-app).
+
+---
+
+## Environment configuration
+
+Note that sometimes, there is a need for additional implementation. If needed, from here you will be the one to know all of its details.
+
+### Ubuntu
+
+No specific additional commands needed.
+
+### Windows
+
+No specific additional commands needed.
+
+### MacOS
+
+No specific additional commands needed.
+
+---
+
+## Support
+
+We know that we do our best, but it is inevitable to acknowledge that we make mistakes. If you ever need to report a bug, report a problem, talk to us, please do so! We will be available at our bests at this repository or gustavo.rosa@unesp.br.
+
+---
